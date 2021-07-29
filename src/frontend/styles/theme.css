@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.App {
+    min-height: 100vh;
+    background-color: rgb(255, 255, 255);
+    color: rgba(0, 0, 0, 1);
+}
+
+.App--dark {
+    min-height: 100vh;
+    color: rgb(255, 255, 255);
+    background-color: rgba(31, 32, 44, 0.993);
+}
