@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+      "module": "commonjs",
+      "baseUrl": "./",
+      "rootDir": ".",
+      "outDir": "build",
+      "target": "es6",
+      "jsx": "react",
+      "removeComments": true,
+      "moduleResolution": "node",
+      "esModuleInterop": true,
+      "lib": ["es6", "DOM"],
+      "allowJs": true,
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+    },
+    "include": [
+      "**.ts",
+      "./*/**.ts", 
+      "api"    
+    ],
+    "exclude": [
+      "node_modules"
+    ],
+}
