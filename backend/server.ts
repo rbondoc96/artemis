@@ -11,7 +11,6 @@ const sequelize = db.sequelize;
 
 export class Server {
     public server: express.Application;
-    public router: express.Router;
 
     private port: string | number;
     // private passport: passport.PassportStatic
@@ -19,6 +18,7 @@ export class Server {
     
     constructor() {
         this.server = express();
+        this.port = 5000;
         this.setConfig();
         this.setApi();
         this.setRoutes();
@@ -50,7 +50,7 @@ export class Server {
             extended: false,
         }));
 
-        this.server.use(express.static(path.join(__dirname, "../frontend/build")));
+        this.server.use(express.static(path.join(__dirname, "../../frontend/build")));
     }
 
 
@@ -86,7 +86,7 @@ export class Server {
 
     private setRoutes(): void {
         this.server.get("*", (req: express.Request, res: express.Response) => {
-            return res.sendFile(path.join(__dirname, "../frontend/build/index.html"));
+            return res.sendFile(path.join(__dirname, "../../frontend/build/index.html"));
         })
     }
 }

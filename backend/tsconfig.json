@@ -7,15 +7,19 @@
         "removeComments": true,
         "moduleResolution": "node",
         "allowJs": true,
-        "forceConsistentCasingInFileNames": true
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "typeRoots": [
+            "./types"
+        ]
     },
     "include": [
         "**.ts",
         "./**/*",
     ],
     "exclude": [
-        "node_modules",
-        "frontend",
-        "build"
+        "./node_modules/*",
+        "./build/*",
+        "./types/*"
     ]
 }

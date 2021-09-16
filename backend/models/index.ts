@@ -2,22 +2,18 @@
 
 import * as fs from "fs";
 import * as path from "path";
-import {Sequelize, DataTypes} from "sequelize";
+import {Sequelize, DataTypes} from "sequelize"
+import {PGConfig} from "../types/config"
 
-import * as dbconfig from "../config/database"
+import DBConfig from "../config/database"
 
 const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || "development";
 
-const pgConfig = dbconfig[env];
+const pgConfig: PGConfig = DBConfig[env];
 const db: {[name: string]: any} = {};
 
-let sequelize;
-if (pgConfig.use_env_variable) {
-  sequelize = new Sequelize(process.env[pgConfig.use_env_variable], pgConfig);
-} else {
-  sequelize = new Sequelize(pgConfig.database, pgConfig.username, pgConfig.password, pgConfig);
-}
+let sequelize: Sequelize = new Sequelize(pgConfig.database, pgConfig.username, pgConfig.password, pgConfig);
 
 fs
   .readdirSync(__dirname)
