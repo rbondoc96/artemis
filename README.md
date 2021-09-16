@@ -1,15 +1,21 @@
 PostgreSQL/Express/React/NodeJS Starter Project
 ---
-1. Uses Webpack for React
-2. Sequelize for ORM
-3. Proxy for webpack server for /api/* requests
+1. TypeScript used in frontend and backend
+2. React through Webpack (not create-react-app)
+3. SCSS capability
+4. Sequelize for ORM, PostgreSQL for database
+5. Proxy for Webpack server for /api/* requests
 
 ## How to Start
-1. Start frontend dev server
+1. Start frontend server
 ```shell
-src/frontend $  npm run dev-server
+/frontend $  npm run dev-server
 ```
-2. Start backend server (with Typescript compile)
+2. Start backend server
 ```
-npm run ts-start
+/backend  $  npm run ts-start
+```
+3. Build frontend 
+```shell
+/frontend $  npm run build
 ```
