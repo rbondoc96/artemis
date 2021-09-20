@@ -1,16 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --color-text: rgb(0, 0, 0);
+    --color-text-light: rgb(255, 255, 255);
+
+    --color-primary: rgb(85, 189, 202);
+
+    --color-secondary: rgb(242, 125, 66);
+
+    --color-tertiary: rgb(2, 36, 68);
+    --color-tertiary-30: rgba(2, 36, 68, 0.3);
+
+    --color-bg-footer: rgb(77, 83, 89);
+
+    --width-gutter: 2em;
+
+    --height-nav-header: 40px;
+    --height-nav-nav: 100px;
+}
+
 body {
     margin: 0;
     padding: 0;
 }
 
-.App {
+a {
+    text-decoration: none;
+}
+
+.app {
     min-height: 100vh;
     background-color: rgb(255, 255, 255);
     color: rgba(0, 0, 0, 1);
+
+    font-family: "Urbanist", sans-serif;
 }
 
-.App--dark {
-    min-height: 100vh;
-    color: rgb(255, 255, 255);
-    background-color: rgba(31, 32, 44, 0.993);
+.footer {
+    padding-left: var(--width-gutter);
+    padding-right: var(--width-gutter);
 }

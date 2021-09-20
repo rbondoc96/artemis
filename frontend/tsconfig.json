@@ -14,10 +14,14 @@
       "strict": true,
       "forceConsistentCasingInFileNames": true,
     },
+    "typeRoots": [
+      "types"
+    ],
     "include": [
       "**.ts",
       "./*/**.ts", 
-      "api"    
+      "api",
+      "types"    
     ],
     "exclude": [
       "node_modules"

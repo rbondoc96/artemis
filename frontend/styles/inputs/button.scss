@@ -1,0 +1,20 @@
+.button button {
+    width: 150px;
+    text-transform: uppercase;
+    border-radius: 20px;
+}
+
+.button.button-primary button {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary)
+}
+
+.button.button-secondary button {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+}
+
+.button.button-tertiary button {
+    background-color: var(--color-tertiary);
+    border-color: var(--color-tertiary);
+}

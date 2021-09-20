@@ -1,0 +1,45 @@
+.navigation-header {
+    height: var(--height-nav-header);
+    align-items: center;
+
+    background-color: var(--color-tertiary-30);
+}
+
+.navigation-header-contacts {
+    display: flex;
+}
+
+.navigation-header-contact {
+    display: flex;
+    align-items: center;
+    margin-right: 3em;
+}
+.navigation-header-contact svg {
+    margin-right: 0.8em;
+}
+.navigation-header-contact a {
+    font-size: 0.8em;
+    text-decoration: none;
+    font-weight: 300;
+    color: var(--color-text);
+    transition: 0.3s color;
+}
+.navigation-header-contact a:hover {
+    color: var(--color-secondary);
+    transition: 0.3s color;
+}
+
+.navigation-header-socials {
+    display: flex;
+    justify-content: flex-end;
+}
+.navigation-header-socials a {
+    margin-left: 0.8em;
+}
+.navigation-header-socials .social-svg-mask {
+    transition: 0.3s fill;
+}
+.navigation-header-socials .social-icon:hover .social-svg-mask {
+    fill: var(--color-secondary) !important;
+    transition: 0.3s fill;
+}

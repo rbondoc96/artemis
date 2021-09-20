@@ -1,0 +1,19 @@
+.home-container {
+    padding: 0 !important;
+}
+
+.home-hero {
+    position: relative;
+}
+
+.home-hero-overlay {
+    z-index: 200;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+}
+
+.home-hero-photo img {
+    width: 100%;
+    height: calc(100vh - var(--height-nav) - var(--height-nav-header));
+}

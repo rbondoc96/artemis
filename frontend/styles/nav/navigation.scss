@@ -1,0 +1,15 @@
+@import "./navigation-header.scss";
+@import "./navigation-nav.scss";
+
+.navigation-nav,
+.navigation-header {
+    padding-left: var(--width-gutter);
+    padding-right: var(--width-gutter);
+}
+
+.navigation-mobile-toggle {
+    cursor: pointer;
+
+    display: flex;
+    justify-content: flex-end;
+}

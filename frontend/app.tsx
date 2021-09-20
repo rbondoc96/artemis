@@ -5,35 +5,28 @@ import {
     Route
 } from "react-router-dom"
 
-import Container from "react-bootstrap/Container"
+import {Container, Row} from "react-bootstrap"
 
 import {
     UIContext, 
     getWindowSize,
 } from "./context/UIContext"
 
-import Component from "./components/mycomponent"
+import Navigation from "./components/header/Navigation"
+import Footer from "./components/footer/Footer"
+import Home from "./pages/Home"
 
 import {fetchData} from "./api"
 
+import "bootstrap/dist/css/bootstrap.min.css"
 import "./styles/theme.scss"
 
-const App: React.FC = () => {
-    const {uiSize, uiTheme} = React.useContext(UIContext)
+export default function App() {
+    const {uiSize} = React.useContext(UIContext)
     const [size, setSize] =  uiSize
-    const [theme, setTheme] = uiTheme
-    const [data, setData] = React.useState(null)
 
     const onWindowResize = (event: UIEvent) => {
         setSize(getWindowSize(window.innerWidth))
-    }
-
-    const themeToggle = (event: React.MouseEvent<HTMLButtonElement>) => {
-        if(theme.toLowerCase() == "light") {
-            setTheme("dark")
-        } else {
-            setTheme("light")
-        }
     }
 
     React.useEffect(() => {
@@ -56,30 +49,23 @@ const App: React.FC = () => {
 
         return () => {
             window.removeEventListener("resize", onWindowResize)
-        }
+        }        
     }, [])
     
-    return(<div 
-        className={(theme == "light")? "App" : "App--dark"}
-        >
+
+    return(<div className="app">
         <Router>
-            <Container>
-                <div>
-                    My App
-                </div>
-                <button onClick={themeToggle}>
-                    Change Theme
-                </button>
-                <Component message="I'm optional! ">
-                    My component
-                </Component>
-                
+            <header>
+                <Navigation/>
+            </header>
+            <main>
                 <Switch>
-                
+                    <Route exact path="/" component={Home} />
                 </Switch>
-            </Container>
+            </main>
+            <footer>
+                <Footer />
+            </footer>
         </Router>
     </div>)
 }
-
-export default App

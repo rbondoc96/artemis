@@ -4,9 +4,8 @@ import * as express from "express";
 import * as cors from "cors";
 
 import ApiRouter from "./api";
-import db from "./models";
+import {sequelize} from "./db/models";
 
-const sequelize = db.sequelize;
 // const User = db.User;
 
 export class Server {

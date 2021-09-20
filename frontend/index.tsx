@@ -5,7 +5,7 @@ import {UIProvider} from "./context/UIContext"
 
 import App from "./app"
 
-document.title = "PERN-tss"
+document.title = "adopt-a-paw"
 ReactDOM.render(
     <React.StrictMode>
         <UIProvider>

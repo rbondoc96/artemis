@@ -1,3 +1,1 @@
-import {fetchData} from "./functions";
-
-export {fetchData}
+export * from "./functions"

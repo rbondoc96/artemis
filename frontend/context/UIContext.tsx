@@ -1,12 +1,18 @@
 import React, {createContext, useState} from "react"
 
 export function getWindowSize(width: number|string): string {
-    if(width > 1000) {
-        return "large"
-    } else if(width > 480) {
-        return "medium"
+    if(width >= 1400) {
+        return "xxl"
+    } else if(width >= 1200) {
+        return "xl"
+    } else if(width >= 992) {
+        return "lg"
+    } else if(width >= 768) {
+        return "md"
+    } else if(width >= 576) {
+        return "sm"
     } else {
-        return "small"
+        return "xs"
     }
 }
 
