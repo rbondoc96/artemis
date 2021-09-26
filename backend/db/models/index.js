@@ -1,19 +1,17 @@
-"use strict";
+const fs = require("fs");
+const path = require("path");
 
-import * as fs from "fs";
-import * as path from "path";
-import {Sequelize, DataTypes} from "sequelize"
-import {PGConfig} from "../../types/config"
+const {Sequelize, DataTypes} = require("sequelize");
 
-import DBConfig from "../../config/database"
+const DBConfig = require("../config");
 
 const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || "development";
 
-const pgConfig: PGConfig = DBConfig[env];
-const db: {[name: string]: any} = {};
+const pgConfig = DBConfig[env];
+const db= {};
 
-let sequelize: Sequelize = new Sequelize(pgConfig.database, pgConfig.username, pgConfig.password, pgConfig);
+let sequelize = new Sequelize(pgConfig.database, pgConfig.username, pgConfig.password, pgConfig);
 
 fs
   .readdirSync(__dirname)
@@ -26,7 +24,6 @@ fs
   });
 
 Object.keys(db).forEach(modelName => {
-  console.log(modelName);
   if (db[modelName].associate) {
     db[modelName].associate(db);
   }
@@ -35,4 +32,4 @@ Object.keys(db).forEach(modelName => {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
-export default db;
+module.exports = db;

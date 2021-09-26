@@ -1,10 +1,7 @@
-import * as dotenv from "dotenv";
-
-import {PGConfig, DatabaseConfig} from "../types/config"
-
+const dotenv = require("dotenv");
 dotenv.config();
 
-const development: PGConfig = {
+const development = {
     "host": "127.0.0.1",
     "dialect": "postgres",
     "port": 5432,
@@ -13,16 +10,17 @@ const development: PGConfig = {
     "password": process.env.DB_PASS || "postgres",
 };
 
-const test: PGConfig = {
+const test = {
     "host": "127.0.0.1",
     "dialect": "postgres",
     "port": 5432,
     "database": `${process.env.DB_NAME || "project"}-test`,
     "username": process.env.DB_USER || "postgres",
     "password": process.env.DB_PASS || "postgres",
+    "logging": false,
 };
 
-const production: PGConfig = {
+const production = {
     "host": "127.0.0.1",
     "dialect": "postgres",
     "port": 5432,
@@ -31,9 +29,10 @@ const production: PGConfig = {
     "password": process.env.DB_PASS || "postgres",
 };
 
-const DBConfig: DatabaseConfig = {
+const DBConfig = {
     development: development,
     test: test,
     production: production
 }
-export default DBConfig;
+
+module.exports = DBConfig;
