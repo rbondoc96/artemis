@@ -1,5 +1,3 @@
-# Adopt-A-Paw: Cat & Dog Adoption Website
-
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
