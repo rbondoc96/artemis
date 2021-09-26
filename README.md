@@ -128,7 +128,7 @@ Project Link - [https://github.com/rbondoc96/artemis](https://github.com/rbondoc
 [stars-url]: https://github.com/rbondoc96/artemis/stargazers
 [issues-shield]: https://img.shields.io/github/issues/rbondoc96/artemis.svg?style=for-the-badge
 [issues-url]: https://github.com/rbondoc96/artemis/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/rbondoc96/artemis.svg?style=for-the-badge
 [license-url]: https://github.com/rbondoc96/artemis/blob/dev/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/rbondoc96/
