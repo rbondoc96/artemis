@@ -64,7 +64,24 @@ async function post(req, res, next) {
 
         return res.status(201).json(donation);
     } catch(error) {
-        next(errors.CouldNotCreateResource(error));
+        let mappedErrors = error.errors.map(err => {
+            return({
+                message: err.message,
+                fieldInError: err.path,
+                valueInError: err.value,
+            })
+        });
+
+        let errorArg = {
+            name: error.name,
+            errors: mappedErrors,
+        };
+
+        let apiError = errors.CouldNotCreateResource(errorArg);
+        if(error.name == "SequelizeValidationError") {
+            apiError.setStatus(400);
+        }
+        next(apiError);        
     }
 }
 
@@ -117,7 +134,24 @@ async function patch(req, res, next) {
 
         return res.json(donation);
     } catch(error) {
-        next(errors.CouldNotUpdateResource(error));
+        let mappedErrors = error.errors.map(err => {
+            return({
+                message: err.message,
+                fieldInError: err.path,
+                valueInError: err.value,
+            })
+        });
+
+        let errorArg = {
+            name: error.name,
+            errors: mappedErrors,
+        };
+
+        let apiError = errors.CouldNotUpdateResource(errorArg);
+        if(error.name == "SequelizeValidationError") {
+            apiError.setStatus(400);
+        }
+        next(apiError);       
     }
 }
 

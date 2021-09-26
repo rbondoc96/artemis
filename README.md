@@ -59,6 +59,7 @@ The website is being built using the PERN stack:
 * [React](https://reactjs.org/)
 * [Node.js](https://nodejs.org/)
 
+The backend uses Sequelize and Sequelize CLI for its ORM.
 
 ## Getting Started
 To get a local copy up and running follow these simple example steps.
@@ -66,6 +67,7 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 The following items are required to begin installation and correctly run the code
 
+* PostgreSQL v13.3
 * Node.js v16.6.0
 * npm
 
@@ -85,6 +87,15 @@ The following items are required to begin installation and correctly run the cod
     /backend  $ npm install
     ```
 
+3. Create the database
+
+    Use sequelize-cli to create the database and migrate the tables
+
+    ```bash
+    /backend  $ sequelize db:create    # Create DB
+    /backend  $ sequelize db:migrate   # Create tables from migrations
+    ```
+
 ## Usage
 To start the frontend dev server, use `npm start`
 ```bash
@@ -99,6 +110,10 @@ To start the backend server, use ```npm start```
 ## Contributing
 
 Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change. 
+
+For error handling, there is a Google Sheet with a list of error codes and their descriptions. The link to the sheet allows anyone to add comments. If there is an error you want to add, please add a comment or open an issue.
+
+Link to the sheet - https://docs.google.com/spreadsheets/d/1hHzg22qbAh3ex7E4tIlMlMP_rUo0DqDWnBMytqQPsWo/edit?usp=sharing
 
 Any contributions you make are **greatly appreciated!**
 

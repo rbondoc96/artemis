@@ -21,7 +21,7 @@ describe("Voluteer Applications API", () => {
                 .end((error, response) => {
                     response.should.have.status(200);
                     response.body.should.be.a("array");
-                    response.body.length.should.be.equal(0);
+                    response.body.length.should.be.at.least(0);
                     done();
                 });
         });
@@ -245,7 +245,7 @@ describe("Voluteer Applications API", () => {
     /**
      * Test the DELETE route
      */
-    describe("DELETE /api/donations/:uuid", () => {
+    describe("DELETE /api/v-applications/:uuid", () => {
         it("Should DELETE the volunteer application", (done) => {
             this.should.have.property("vApp");            
             const uuid = this.vApp.uuid;

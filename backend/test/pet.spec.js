@@ -21,7 +21,7 @@ describe("Pets API", () => {
                 .end((error, response) => {
                     response.should.have.status(200);
                     response.body.should.be.a("array");
-                    response.body.length.should.be.equal(0);
+                    response.body.length.should.be.at.least(0);
                     done();
                 });
         });
@@ -127,8 +127,12 @@ describe("Pets API", () => {
                 .post("/api/pets")
                 .send(pet)
                 .end((error, response) => {
-                    response.should.have.status(500);
+                    console.log(response);
+                    response.should.have.status(400);
                     response.body.should.have.property("errorArgs");
+                    response.body.errorArgs.should.be.a("array");
+                    response.body.errorArgs.length.should.be.equal(1);
+                    response.body.errorArgs[0].name.should.be.equal("SequelizeValidationError");
                     done();
                 });
         });
@@ -147,8 +151,11 @@ describe("Pets API", () => {
                 .post("/api/pets")
                 .send(pet)
                 .end((error, response) => {
-                    response.should.have.status(500);
+                    response.should.have.status(400);
                     response.body.should.have.property("errorArgs");
+                    response.body.errorArgs.should.be.a("array");
+                    response.body.errorArgs.length.should.be.equal(1);
+                    response.body.errorArgs[0].name.should.be.equal("SequelizeValidationError");
                     done();
                 });
         });
@@ -167,8 +174,11 @@ describe("Pets API", () => {
                 .post("/api/pets")
                 .send(pet)
                 .end((error, response) => {
-                    response.should.have.status(500);
+                    response.should.have.status(400);
                     response.body.should.have.property("errorArgs");
+                    response.body.errorArgs.should.be.a("array");
+                    response.body.errorArgs.length.should.be.equal(1);
+                    response.body.errorArgs[0].name.should.be.equal("SequelizeValidationError");
                     done();
                 });
         });
@@ -181,8 +191,11 @@ describe("Pets API", () => {
                 .post("/api/pets")
                 .send(pet)
                 .end((error, response) => {
-                    response.should.have.status(500);
+                    response.should.have.status(400);
                     response.body.should.have.property("errorArgs");
+                    response.body.errorArgs.should.be.a("array");
+                    response.body.errorArgs.length.should.be.equal(1);
+                    response.body.errorArgs[0].name.should.be.equal("SequelizeValidationError");
                     done();
                 });
         });          
