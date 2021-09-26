@@ -98,7 +98,9 @@ To start the backend server, use ```npm start```
 
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated!**
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change. 
+
+Any contributions you make are **greatly appreciated!**
 
 1. Fork the project
 2. Create a new branch (`git checkout -b feature/AmazingFeature`)
