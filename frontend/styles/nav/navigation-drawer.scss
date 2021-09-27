@@ -17,6 +17,13 @@
 
     svg {
         cursor: pointer;
+        fill: var(--color-text-light);
+        transition: 0.3s fill;
+
+        &:hover {
+            fill: var(--color-secondary);
+            transition: 0.3s fill;
+        }
     }
 }
 
