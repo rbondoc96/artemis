@@ -11,6 +11,7 @@ interface ButtonProps {
     secondary?: boolean
     tertiary?: boolean
     outlined?: boolean
+    className?: string
 }
 
 export default function Button(props: ButtonProps) {
@@ -39,6 +40,13 @@ export default function Button(props: ButtonProps) {
             classes.push("button-primary--outlined")
         } else {
             classes.push("button-primary")
+        }
+    }
+
+    if(props.className) {
+        let tokens = props.className.split(" ")
+        for(let token in tokens) {
+            classes.push(tokens[token])
         }
     }
 

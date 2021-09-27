@@ -23,10 +23,11 @@
     font-weight: 300;
     color: var(--color-text);
     transition: 0.3s color;
-}
-.navigation-header-contact a:hover {
-    color: var(--color-secondary);
-    transition: 0.3s color;
+
+    &:hover {
+        color: var(--color-secondary);
+        transition: 0.3s color;
+    }
 }
 
 .navigation-header-socials {

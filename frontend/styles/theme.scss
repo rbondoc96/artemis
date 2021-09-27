@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 :root {
     --color-text: rgb(0, 0, 0);
@@ -12,8 +14,9 @@
     --color-tertiary-30: rgba(2, 36, 68, 0.3);
 
     --color-bg-footer: rgb(77, 83, 89);
+    --color-bg-hero-overlay: rgba(69, 69, 69, 0.5);
 
-    --width-gutter: 2em;
+    --width-gutter: calc(1.25em + 0.5vw);
 
     --height-nav-header: 40px;
     --height-nav-nav: 100px;
@@ -33,7 +36,7 @@ a {
     background-color: rgb(255, 255, 255);
     color: rgba(0, 0, 0, 1);
 
-    font-family: "Urbanist", sans-serif;
+    font-family: "Quicksand", sans-serif;
 }
 
 .footer {

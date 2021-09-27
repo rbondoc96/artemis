@@ -1,0 +1,85 @@
+.navigation-nav-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: var(--color-tertiary);
+    color: var(--color-text-light);
+
+    width: 240px;
+    height: 100vh;
+    z-index: 800;
+}
+
+.navigation-nav-drawer-toggle {
+    display: grid;
+    justify-items: end;
+    margin: 1.2em 0.8em;
+
+    svg {
+        cursor: pointer;
+    }
+}
+
+.navigation-nav-drawer-contacts {
+    margin: 1.2em 0.8em;
+}
+
+.navigation-nav-drawer-contact {
+    text-align: center;
+    margin: 1em;
+    
+    a {
+        color: var(--color-text-light);
+        transition: 0.3s color;
+
+        &:hover {
+            color: var(--color-secondary);
+            transition: 0.3s color;
+        }
+    }
+
+    svg {
+        margin-right: 0.8em;
+    }
+}
+
+.navigation-nav-drawer-socials {
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: center;
+
+    margin: 1.2em 0.8em;
+}
+
+.navigation-nav-drawer-socials .social-svg-mask path {
+    fill: var(--color-text-light);
+    transition: 0.3s fill;
+
+    &:hover {
+        fill: var(--color-secondary);
+        transition: 0.3s fill;
+    }
+}
+
+ul.navigation-nav-drawer-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    display: grid;
+    justify-items: center;
+
+    li {
+        margin: 0.8em 0;
+    }
+
+    li a {
+        color: var(--color-text-light);
+        transition: 0.3s color;
+
+        &:hover {
+            color: var(--color-secondary);
+            transition: 0.3s color;
+        }
+    }
+}

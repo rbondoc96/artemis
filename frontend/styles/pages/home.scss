@@ -1,19 +1,64 @@
-.home-container {
-    padding: 0 !important;
-}
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 .home-hero {
     position: relative;
+    background-image: url(https://tractive.com/blog/wp-content/uploads/2017/10/cats-and-dogs.jpg);
+    background-repeat: no-repeat; 
+    background-size: cover;
+    height: calc(100vh - var(--height-nav-nav) - var(--height-nav-header));   
+
+    &.home-hero--mobile {
+        height: calc(100vh - var(--height-nav-nav));   
+    }
 }
 
 .home-hero-overlay {
-    z-index: 200;
-    width: 100%;
+    position: absolute;
     height: 100%;
-    background-color: #000;
+    background-color: var(--color-bg-hero-overlay);
+    z-index: 100;
 }
 
-.home-hero-photo img {
-    width: 100%;
-    height: calc(100vh - var(--height-nav) - var(--height-nav-header));
+.home-hero-panel {
+    position: relative;
+    z-index: 200;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    margin-left: clamp(0em, 3vw, 2em);
+    margin-bottom: 2em;
+}
+
+.home-hero-panel-buttons-wrapper {
+    display: flex;
+    margin-bottom: 20px;
+
+    > * {
+        margin-right: 24px;
+    }
+}
+
+.home-hero-panel-tagline-minor {
+    color: var(--color-text-light);
+    font-weight: 100;
+    font-size: clamp(1em, 2.5vw, 1.6em);
+
+    margin-bottom: 20px;
+    max-width: 670px;
+}
+.home-hero-panel-tagline-major {
+    line-height: 115%;
+    font-size: clamp(2em, 5vw, 4em);
+    color: var(--color-text-light);
+
+    max-width: 730px;
+}
+.home-hero-panel-tagline-major span {
+    font-weight: 100;
+}
+.home-hero-panel-tagline-major b {
+    font-weight: 600;
 }

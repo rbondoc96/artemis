@@ -1,7 +1,6 @@
 .button button {
-    width: 150px;
     text-transform: uppercase;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .button.button-primary button {
@@ -9,12 +8,43 @@
     border-color: var(--color-primary)
 }
 
+.button.button-primary--outlined button {
+    background-color: transparent;
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
 .button.button-secondary button {
     background-color: var(--color-secondary);
     border-color: var(--color-secondary);
 }
 
+.button.button-secondary--outlined button {
+    background-color: transparent;
+    border-color: var(--color-secondary);
+    color: var(--color-secondary);
+}
+
 .button.button-tertiary button {
     background-color: var(--color-tertiary);
     border-color: var(--color-tertiary);
+}
+
+.button.button-tertiary--outlined button {
+    background-color: transparent;
+    border-color: var(--color-tertiary);
+    color: var(--color-tertiary);
+}
+
+.hero-button button {
+    font-size: clamp(1em, 2.5vw, 1.6em);
+    min-width: 115px;
+}
+
+.navigation-nav-links button {
+    width: 125px;
+}
+
+.navigation-nav-drawer button {
+    width: 150px;
 }

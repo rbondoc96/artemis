@@ -6,9 +6,10 @@
 .navigation-nav-logo a {
     display: block;
     width: fit-content;
-}
 
-.navigation-nav-links {
+    > svg {
+        width: 175px;
+    }
 }
 
 .navigation-nav-links ul {

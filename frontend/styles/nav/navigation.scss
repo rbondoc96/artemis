@@ -1,5 +1,6 @@
 @import "./navigation-header.scss";
 @import "./navigation-nav.scss";
+@import "./navigation-drawer.scss";
 
 .navigation-nav,
 .navigation-header {
@@ -8,8 +9,11 @@
 }
 
 .navigation-mobile-toggle {
-    cursor: pointer;
-
+    position: relative;
     display: flex;
     justify-content: flex-end;
+
+    > svg {
+        cursor: pointer;
+    }
 }

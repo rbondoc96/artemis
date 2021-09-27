@@ -1,16 +1,14 @@
 import React from "react"
 
-import {Container} from "react-bootstrap"
+import Col from "react-bootstrap/Col"
 
 import "../../styles/footer/footer.scss"
 
 export default function Footer() {
 
     return(
-        <div className="footer">
-            <Container fluid>
-                Footer
-            </Container>
-        </div>
+        <Col sm={12}>
+            Footer
+        </Col>
     )
 }

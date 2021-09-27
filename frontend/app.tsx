@@ -4,7 +4,6 @@ import {
     Switch,
     Route
 } from "react-router-dom"
-
 import {Container, Row} from "react-bootstrap"
 
 import {
@@ -20,6 +19,13 @@ import {fetchData} from "./api"
 
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./styles/theme.scss"
+
+declare global {
+    interface Window {
+        gsap: any
+    }
+}
+window.gsap = window.gsap || {}
 
 export default function App() {
     const {uiSize} = React.useContext(UIContext)
@@ -55,17 +61,19 @@ export default function App() {
 
     return(<div className="app">
         <Router>
-            <header>
-                <Navigation/>
-            </header>
-            <main>
-                <Switch>
-                    <Route exact path="/" component={Home} />
-                </Switch>
-            </main>
-            <footer>
-                <Footer />
-            </footer>
+            <Container fluid className="app-container">
+                <header className="row">
+                    <Navigation/>
+                </header>
+                <main className="row">
+                    <Switch>
+                        <Route exact path="/" component={Home} />
+                    </Switch>
+                </main>
+                <footer className="row">
+                    <Footer />
+                </footer>
+            </Container>
         </Router>
     </div>)
 }
