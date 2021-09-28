@@ -7,7 +7,9 @@ import {UIContext} from "../context/UIContext"
 
 import Button from "../components/inputs/Button"
 
-import "../styles/pages/home.scss"
+import BigLogo from "../imgs/BigLogo"
+
+import "../styles/pages/home/home.scss"
 
 export default function Home() {
 
@@ -42,6 +44,19 @@ export default function Home() {
                             <span>Bring your new <b>furry friend</b> home.</span>
                         </Col>
                     </Row>
+                </Col>
+            </Row>
+        
+            <Row className="home-spiel-panel">
+                <Col className="home-spiel-panel-wrapper">
+                    <div className="home-spiel-logo">
+                        <BigLogo />
+                    </div>
+                    <div className="home-spiel-body">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
                 </Col>
             </Row>
         </Col>

@@ -21,8 +21,8 @@ export default function Navigation() {
     const [drawerOpen, toggleDrawer] = React.useState(false)
     const drawerRef = React.useRef(null)
 
-    let telephoneText = "(619) 123-9876"
-    let telephoneNumber = "619-123-9876"
+    let telephoneText = "(619) 555-0123"
+    let telephoneNumber = "619-555-0123"
 
     let emailText = "Boop Our Inbox"
     let emailAddress = "not-an-email@dummy.me"
@@ -142,6 +142,7 @@ export default function Navigation() {
                             </div>
 
                             <ul className="navigation-nav-drawer-links">
+                                <li><Link to="/">Home</Link></li>
                                 <li><Link to="/browse">Browse Pets</Link></li>
                                 <li><Link to="/about">About Us</Link></li>
                                 <li><Link to="/volunteer">Volunteer</Link></li>

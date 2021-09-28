@@ -1,0 +1,23 @@
+.home-spiel-panel {
+    background-color: var(--color-tertiary);
+
+    height: 260px;
+}
+.home-spiel-body {
+    font-size: clamp(16px, 2vw, 24px);
+    font-weight: 100;
+    color: var(--color-text-light);
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+}
+.home-spiel-body p {
+    max-width: 1220px;
+}
+
+.home-spiel-panel-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

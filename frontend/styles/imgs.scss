@@ -2,3 +2,27 @@
     width: 200px;
     height: auto;
 }
+
+.biglogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.biglogo-text {
+    font-size: clamp(28px, 5vw, 56px);
+    font-weight: 600;
+    text-transform: uppercase;
+
+    color: var(--color-text-light);
+}
+.biglogo-paw {
+    display: inline-block;
+    margin: 0 clamp(0.8em, 2vw, 1.2em);
+
+    svg {
+        --dim-biglogo-paw: clamp(25px, 5vw, 50px);
+
+        width: var(--dim-biglogo-paw);
+        height: var(--dim-biglogo-paw);
+    }
+}
